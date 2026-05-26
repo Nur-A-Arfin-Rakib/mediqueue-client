@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #6C47FF;
+    --color-accent: #FF6B35;
+    --color-bg: #ffffff;
+    --color-card: #f8f7ff;
+    --color-text: #0F0A1E;
+    --color-muted: #6B7280;
+    --color-border: #e5e0ff;
+  }
+  .dark {
+    --color-bg: #0F0A1E;
+    --color-card: #1A1332;
+    --color-text: #F5F3FF;
+    --color-muted: #9CA3AF;
+    --color-border: #2D2350;
+  }
+  body {
+    @apply font-body transition-colors duration-300;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-display font-semibold px-6 py-3 rounded-xl hover:bg-primary-dark transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-outline-primary {
+    @apply border-2 border-primary text-primary font-display font-semibold px-6 py-3 rounded-xl hover:bg-primary hover:text-white transition-all duration-300;
+  }
+  .card-surface {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    @apply rounded-2xl;
+  }
+  .input-field {
+    background-color: var(--color-card);
+    border: 1.5px solid var(--color-border);
+    color: var(--color-text);
+    @apply w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all duration-200;
+  }
+  .section-title {
+    @apply font-display font-bold text-3xl md:text-4xl;
+    color: var(--color-text);
+  }
+  .badge-subject {
+    @apply text-xs font-semibold px-3 py-1 rounded-full bg-primary/10 text-primary;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 3px; }
+
+/* Swiper overrides */
+.swiper-pagination-bullet-active { background: var(--color-primary) !important; }
+.swiper-button-next, .swiper-button-prev { color: var(--color-primary) !important; }
