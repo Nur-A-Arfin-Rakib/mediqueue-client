@@ -2,7 +2,7 @@
 
 A modern full-stack tutor booking platform connecting students with expert educators.
 
-🌐 **Live Site:** [https://mediqueue-tutor.vercel.app](https://mediqueue-tutor.vercel.app)
+🌐 **Live Site:** [https://mediqueue-client-eight.vercel.app](https://mediqueue-client-eight.vercel.app)
 
 ## ✨ Features
 
